@@ -59,7 +59,7 @@ io.on('connection', (socket) => {
                 studentLocation.longitude
             );
 
-            if (distance <= 10) { // Allow attendance within 100 meters
+            if (distance <= 100) { // Allow attendance within 100 meters
                 activeSessions[sessionCode].students.push({
                     ...studentData,
                     distance: distance.toFixed(2) // Distance in meters
